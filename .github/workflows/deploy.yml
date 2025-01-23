@@ -23,7 +23,7 @@ jobs:
     # 3. Sincroniza los archivos al VPS
     - name: Deploy Landing Page
       run: |
-        ssh deploy@31.170.165.68 "
+        ssh -o StrictHostKeyChecking=no deploy@31.170.165.68 "
           cd /var/www/eliconacento/landing-page &&
           git pull origin main &&
           pnmp install &&
