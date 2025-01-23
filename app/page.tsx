@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className='font-sans text-white bg-gray-900 min-h-screen'>
       <header className='flex justify-between items-center py-6 px-12 bg-gray-800 shadow-lg'>
-        <div className='font-bold text-2xl'>Company Logo</div>
+        <div className='font-bold text-2xl'>Elí con Acento soon...</div>
         <nav className='flex gap-6'>
           <a href='#' className='hover:text-gray-300 text-lg'>Features</a>
           <a href='#' className='hover:text-gray-300 text-lg'>Pricing</a>
