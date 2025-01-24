@@ -8,12 +8,24 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    # 1. Checa el código
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Deploy to VPS
-        run: |
-              ssh deploy@31.170.165.68
+    # 2. Configurar acceso SSH
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    # 3. Add VPS to known hosts
+    - name: Add VPS to known hosts
+      run: ssh-keyscan 31.170.165.68 >> ~/.ssh/known_hosts
+
+    - name: Deploy to VPS
+      run: |
+          ssh deploy@31.170.165.68
           
 
