@@ -18,10 +18,10 @@ jobs:
           #VPS_HOST: "31.170.165.68"
           #VPS_USER: "deploy"
         run: |
-            cd /var/www/eliconacento/landing-eliconacento &&
-            git pull origin main &&
-            pnpm install &&
-            pnpm build &&
+            cd /var/www/eliconacento/landing-eliconacento 
+            git pull origin main 
+            pnpm install 
+            pnpm build 
             pm2 restart landing-eliconacento
           
 
