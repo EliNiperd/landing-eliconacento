@@ -13,16 +13,14 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Deploy to VPS
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          #VPS_HOST: "31.170.165.68"
-          #VPS_USER: "deploy"
         run: |
-            ssh deploy@31.170.165.68 'mkdir -p /var/www/eliconacento/landing-eliconacento && 
-            cd /var/www/eliconacento/landing-eliconacento && 
-            git pull origin main && 
-            pnpm install && 
-            pnpm build && 
-            pm2 restart landing-eliconacento'
+              ssh deploy@31.170.165.68 << 'EOF'
+              mkdir -p /var/www/eliconacento/landing-eliconacento
+              cd /var/www/eliconacento/landing-eliconacento
+              git pull origin main
+              pnpm install
+              pnpm build
+              pm2 restart landing-eliconacento
+              EOF
           
 
