@@ -3,30 +3,30 @@ name: Deploy to VPS
 on:
   push:
     branches:
-      - main # Cambia 'main' a tu rama principal si usas otra.
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    # 1. Checa el código
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    # 2. Configurar acceso SSH
-    - name: Set up SSH
-      uses: webfactory/ssh-agent@v0.5.3
-      with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Deploy to VPS
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          VPS_HOST: "31.170.165.68"
+          VPS_USER: "deploy"
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H $VPS_HOST >> ~/.ssh/known_hosts
+          ssh $VPS_USER@$VPS_HOST "
+            cd /var/www/eliconacento/landing-eliconacento &&
+            git pull origin main &&
+            pnpm install &&
+            pnpm build &&
+            pm2 restart landing-eliconacento
+          "
 
-   # 4. Sincroniza los archivos al VPS
-    - name: Deploy Landing Page
-      run: |
-        ssh  deploy@31.170.165.68 "
-          cd /var/www/eliconacento/landing-eliconacento &&
-          git pull origin main &&
-          pnmp install &&
-          pnpm build &&
-          pm2 restart landing-eliconacento
-        "
