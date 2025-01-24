@@ -15,18 +15,13 @@ jobs:
       - name: Deploy to VPS
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          VPS_HOST: "31.170.165.68"
-          VPS_USER: "deploy"
-        run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H $VPS_HOST >> ~/.ssh/known_hosts
-          ssh $VPS_USER@$VPS_HOST "
+          #VPS_HOST: "31.170.165.68"
+          #VPS_USER: "deploy"
+        run: 
             cd /var/www/eliconacento/landing-eliconacento &&
             git pull origin main &&
             pnpm install &&
             pnpm build &&
             pm2 restart landing-eliconacento
-          "
+          
 
