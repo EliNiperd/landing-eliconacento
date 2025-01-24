@@ -18,7 +18,7 @@ jobs:
           #VPS_HOST: "31.170.165.68"
           #VPS_USER: "deploy"
         run: |
-            ssh root@31.170.165.68 'mkdir -p /var/www/eliconacento/landing-eliconacento && 
+            ssh deploy@31.170.165.68 'mkdir -p /var/www/eliconacento/landing-eliconacento && 
             cd /var/www/eliconacento/landing-eliconacento && 
             git pull origin main && 
             pnpm install && 
