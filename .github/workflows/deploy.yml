@@ -17,7 +17,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           #VPS_HOST: "31.170.165.68"
           #VPS_USER: "deploy"
-        run: 
+        run: |
             cd /var/www/eliconacento/landing-eliconacento &&
             git pull origin main &&
             pnpm install &&
