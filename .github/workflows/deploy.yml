@@ -20,22 +20,13 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    # 3. Sincroniza los archivos al VPS
+   # 4. Sincroniza los archivos al VPS
     - name: Deploy Landing Page
       run: |
-        ssh deploy@31.170.165.68"
-          cd /var/www/eliconacento/landing-page &&
+        ssh  deploy@31.170.165.68 "
+          cd /var/www/eliconacento/landing-eliconacento &&
           git pull origin main &&
           pnmp install &&
           pnpm build &&
-          pm2 restart landing-page
+          pm2 restart landing-eliconacento
         "
-
-    #- name: Deploy Medallones-Titanes
-    #  run: |
-    #    ssh deploy@<IP_VPS> "
-    #      cd /var/www/eliconacento/medallones-titanes &&
-    #      git pull origin main &&
-    #      npm install &&
-    #      pm2 restart medallones-titanes
-    #    "
