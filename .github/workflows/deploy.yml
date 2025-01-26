@@ -30,12 +30,11 @@ jobs:
           cd /var/www/eliconacento/landing-eliconacento
           git pull origin main --rebase
           git add -A
-          git commit --amend --author="deploy<deploy@srv656774.hstgr.cloud>"
           git rebase --continue 
           git push -f
+          EOF
           pnpm install
           pnpm build
           pm2 restart landing-eliconacento
-          EOF
           
 
