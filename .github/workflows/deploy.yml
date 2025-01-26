@@ -28,9 +28,10 @@ jobs:
       run: |
           ssh deploy@31.170.165.68 << 'EOF'
           cd /var/www/eliconacento/landing-eliconacento
+          git pull
           git add.
-          git commit -m "Automatización"
-          git pull origin main
+          git commit -m "Actualizado - Automatización"
+          git push
           pnpm install
           pnpm build
           pm2 restart landing-eliconacento
