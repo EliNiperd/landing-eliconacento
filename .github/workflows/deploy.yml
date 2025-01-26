@@ -39,4 +39,3 @@ jobs:
           pnpm build
           pm2 restart landing-eliconacento
           EOF
-EOFEOF
