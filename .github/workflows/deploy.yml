@@ -32,7 +32,7 @@ jobs:
           git add -A
           git commit --amend --author="deploy<deploy@srv656774.hstgr.cloud>"
           git rebase --continue 
-          git push --force-with-lease
+          git push -f
           pnpm install
           pnpm build
           pm2 restart landing-eliconacento
