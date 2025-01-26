@@ -27,12 +27,11 @@ jobs:
     - name: Deploy to VPS
       run: |
           ssh deploy@31.170.165.68 << 'EOF'
-          export PATH="$HOME/.local/share/pnpm:$HOME/.npm-global/bin:$PATH"
+          source ~/.bashrc
           cd /var/www/eliconacento/landing-eliconacento
           git reset --hard HEAD
           git clean -fd
-          git pull origin main --rebase || echo "Rebase failed, skipping..."
-          if [ -d ".git/rebase-apply" ]; then git rebase --continue; fi
+          git pull origin main --rebase
           pnpm install
           pnpm build
           pm2 restart landing-eliconacento
