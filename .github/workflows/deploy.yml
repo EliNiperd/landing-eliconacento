@@ -28,13 +28,15 @@ jobs:
       run: |
           ssh deploy@31.170.165.68 << 'EOF'
           cd /var/www/eliconacento/landing-eliconacento
+          git reset --hard HEAD
+          git clean -fd
           git pull origin main --rebase
           git add -A
           git rebase --continue 
           git push -f
-          EOF
+          
           pnpm install
           pnpm build
           pm2 restart landing-eliconacento
-          
-
+          EOF
+EOFEOF
