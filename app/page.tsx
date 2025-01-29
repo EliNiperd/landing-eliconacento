@@ -8,7 +8,7 @@ export default function Home() {
         <div className='font-bold text-2xl'>Elí con Acento pronto...</div>
         <nav className='flex gap-6'>
           <a href='#' className='hover:text-gray-300 text-lg'>Características</a>
-          <a href='#' className='hover:text-gray-300 text-lg'>Pricing</a>
+          <a href='#' className='hover:text-gray-300 text-lg'>Precios</a>
           <a href='#' className='hover:text-gray-300 text-lg'>About Us</a>
           <a href='#' className='hover:text-gray-300 text-lg'>Support</a>
         </nav>
