@@ -7,7 +7,7 @@ export default function Home() {
       <header className='flex justify-between items-center py-6 px-12 bg-gray-800 shadow-lg'>
         <div className='font-bold text-2xl'>Elí con Acento pronto...</div>
         <nav className='flex gap-6'>
-          <a href='#' className='hover:text-gray-300 text-lg'>Features</a>
+          <a href='#' className='hover:text-gray-300 text-lg'>Características</a>
           <a href='#' className='hover:text-gray-300 text-lg'>Pricing</a>
           <a href='#' className='hover:text-gray-300 text-lg'>About Us</a>
           <a href='#' className='hover:text-gray-300 text-lg'>Support</a>
