@@ -15,17 +15,19 @@ Construir un portafolio web moderno y funcional para Eli con Acento, destacando 
 
 ## Tecnologías y Habilidades Clave
 -   **Lenguajes:** Javascript, TypeScript, C#.NET
--   **Frontend:** React, Next.js, HTML5, TailwindCSS, Bootstrap, UX/UI
+-   **Frontend:** React, Next.js, HTML5, TailwindCSS, Bootstrap, UX/UI, Framer Motion
 -   **Backend:** Node.js, Express.js
 -   **Bases de Datos:** SQL Server, Oracle, Oracle SQL
 -   **Herramientas/DevOps:** Gestión de Proyectos, CI/CD, Scrum, Trello, Jira, Git, GitHub, Visual Studio, Visual Studio Code, SQL Server Management Studio, Oracle SQL Developer, Postman
 
 ## Estructura de la Aplicación (app/page.tsx)
 El portafolio es una página única (one-page) con las siguientes secciones:
-1.  **Hero:** Introducción con nombre, tagline, biografía y enlaces a redes sociales.
-2.  **Sobre Mí y Habilidades:** Foto de perfil, descripción y listado de tecnologías por categorías.
-3.  **Proyectos Destacados:** Presentación de proyectos individuales con imágenes, descripciones, características, stack tecnológico y enlaces a GitHub/Demo.
-4.  **Contacto:** Sección final con un mensaje y un enlace `mailto:`.
+1.  **Navegación:** Barra de navegación fija con enlaces de desplazamiento suave.
+2.  **Hero:** Introducción con nombre, tagline, biografía y enlaces a redes sociales, con animaciones de entrada.
+3.  **Sobre Mí y Habilidades:** Foto de perfil, descripción y listado de tecnologías por categorías.
+4.  **Proyectos Destacados:** Presentación de proyectos individuales con imágenes, descripciones, características, stack tecnológico y enlaces a GitHub/Demo.
+5.  **Contacto:** Sección final con un mensaje y un enlace `mailto:`.
+6.  **Footer:** Pie de página con información de copyright.
 
 ## Proyectos Destacados
 -   **MediScan: Inventario Inteligente de Medicamentos**
@@ -72,9 +74,6 @@ El portafolio es una página única (one-page) con las siguientes secciones:
 -   **Elementos Clave:** Diseño minimalista, desplazamiento suave, animaciones sutiles, tarjetas de proyecto claras, navegación pegajosa, footer.
 
 ## Futuras Mejoras Sugeridas
--   **Implementar Experiencia Laboral:** Crear una sección dedicada en el portafolio para mostrar la experiencia laboral detallada.
+-   **Sección de Experiencia Laboral:** Crear una sección dedicada en el portafolio para mostrar la experiencia laboral detallada.
 -   **Formulario de Contacto Funcional:** Desarrollar un backend para el formulario de contacto.
--   **Animaciones y Transiciones:** Incorporar animaciones sutiles (ej. con Framer Motion) para mejorar la experiencia de usuario.
--   **Footer:** Añadir un pie de página con información de copyright y enlaces sociales.
--   **Navegación:** Implementar una barra de navegación pegajosa con desplazamiento suave a las secciones.
 -   **Optimización de Imágenes:** Asegurar que todas las imágenes estén optimizadas para la web.

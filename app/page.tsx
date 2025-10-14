@@ -1,29 +1,63 @@
+"use client";
+
 import Image from "next/image";
 import { aboutMe, projects, skills } from "./lib/data";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import Navbar from "./components/Navbar";
+import { motion } from "framer-motion";
 
 export default function HomePage() {
   return (
-    <main className="container mx-auto max-w-4xl p-8 antialiased">
+    <main className="container mx-auto max-w-4xl p-8 pt-24 antialiased">
+      <Navbar />
       {/* --- HERO SECTION --- */}
       <section id="hero" className="h-screen flex flex-col justify-center items-start">
-        <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 pb-2">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 pb-2"
+        >
           {aboutMe.name}
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-300 mt-2">{aboutMe.tagline}</p>
-        <p className="text-md text-gray-400 max-w-xl mt-4">{aboutMe.bio}</p>
-        <div className="flex items-center gap-4 mt-8">
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="text-xl md:text-2xl text-gray-300 mt-2"
+        >
+          {aboutMe.tagline}
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="text-md text-gray-400 max-w-xl mt-4"
+        >
+          {aboutMe.bio}
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="flex items-center gap-4 mt-8"
+        >
           <a href="#projects" className="px-6 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-colors">
             Ver Proyectos
           </a>
           <a href="#contact" className="px-6 py-2 border border-gray-600 text-gray-300 rounded-lg hover:bg-gray-800 transition-colors">
             Contacto
           </a>
-        </div>
-        <div className="flex items-center gap-6 mt-12 text-2xl">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 1.0 }}
+          className="flex items-center gap-6 mt-12 text-2xl"
+        >
           <a href={aboutMe.githubUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaGithub /></a>
           <a href={aboutMe.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaLinkedin /></a>
-        </div>
+        </motion.div>
       </section>
 
       {/* --- ABOUT ME & SKILLS SECTION --- */}
