@@ -21,8 +21,8 @@ export default function HomePage() {
           </a>
         </div>
         <div className="flex items-center gap-6 mt-12 text-2xl">
-          <a href="https://github.com/eliconacento" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaGithub /></a>
-          <a href="https://linkedin.com/in/eliconacento" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaLinkedin /></a>
+          <a href={aboutMe.githubUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaGithub /></a>
+          <a href={aboutMe.linkedinUrl} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaLinkedin /></a>
         </div>
       </section>
 
@@ -112,6 +112,10 @@ export default function HomePage() {
         </a>
       </section>
 
+      {/* --- FOOTER --- */}
+      <footer className="py-8 text-center text-gray-500 text-sm">
+        <p>&copy; {new Date().getFullYear()} {aboutMe.name}. Todos los derechos reservados.</p>
+      </footer>
     </main>
   );
 }

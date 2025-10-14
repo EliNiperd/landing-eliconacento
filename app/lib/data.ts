@@ -1,11 +1,10 @@
-
 export interface Project {
   title: string;
   imageUrl: string;
   description: string;
   features: string[];
   techStack: string;
-  githubUrl: string;
+  githubUrl?: string;
   liveDemoUrl?: string;
 }
 
@@ -19,7 +18,7 @@ export const projects: Project[] = [
       "Reconocimiento y captura de productos vía cámara móvil.",
       "Gestión de stock en tiempo real y alertas de inventario bajo.",
     ],
-    techStack: "React Native, Python, FastAPI, TensorFlow.js, PostgreSQL", // Ejemplo, puedes ajustarlo
+    techStack: "React Native, Python, FastAPI, TensorFlow.js, PostgreSQL",
     githubUrl: "https://github.com/EliNiperd/medical-inventory",
     liveDemoUrl: "https://medical-inventory.eliconacento.com/",
   },
@@ -32,25 +31,51 @@ export const projects: Project[] = [
       "Estadísticas detalladas por piloto y escudería.",
       "Calendario interactivo de la temporada con resultados.",
     ],
-    techStack: "Next.js, TypeScript, WebSockets, Chart.js, Tailwind CSS", // Ejemplo, puedes ajustarlo
+    techStack: "Next.js, TypeScript, WebSockets, Chart.js, Tailwind CSS",
     githubUrl: "https://github.com/EliNiperd/f1-gp-david",
-    liveDemoUrl: "https://f1.eliconacento.com", // Placeholder sugerido
+    liveDemoUrl: "https://f1.eliconacento.com",
+  },
+  {
+    title: "Aplicación Web para Certificación ISO/Medio Ambiente - iCalidad",
+    imageUrl: "/project-icalidad.png", // Placeholder
+    description: "Plataforma para la gestión y certificación de sistemas de calidad ISO y medio ambiente, optimizando procesos y documentación.",
+    features: [
+      "Gestión documental y de procesos para certificaciones ISO.",
+      "Seguimiento de auditorías y no conformidades.",
+      "Generación de informes personalizados.",
+    ],
+    techStack: "Next.js, Node.js, SQL Server, Oracle SQL, TailwindCSS",
+    // githubUrl: "", // Si tienes un repo, añádelo aquí
+    // liveDemoUrl: "", // Si tienes un demo, añádelo aquí
+  },
+  {
+    title: "Módulos de Logística & Transporte",
+    imageUrl: "/project-logistica.png", // Placeholder
+    description: "Conjunto de módulos para la optimización de operaciones logísticas y de transporte, incluyendo gestión de rutas y seguimiento de envíos.",
+    features: [
+      "Optimización de rutas de entrega.",
+      "Seguimiento en tiempo real de flotas y envíos.",
+      "Gestión de inventario en tránsito.",
+    ],
+    techStack: "ASP.NET, React, Node.js",
+    // githubUrl: "", // Si tienes un repo, añádelo aquí
+    // liveDemoUrl: "", // Si tienes un demo, añádelo aquí
   },
 ];
 
 export const skills = {
-  frontend: ["TypeScript", "React", "Next.js", "HTML5", "Tailwind CSS", "Framer Motion"],
-  backend: ["Node.js", "Python", "Express", "FastAPI"],
-  database: ["PostgreSQL", "MongoDB", "MySQL"],
-  mobile: ["React Native", "Expo"],
-  "ai/ml": ["TensorFlow.js", "Scikit-learn"],
-  "devops/cloud": ["Docker", "GitHub Actions", "Vercel", "AWS"],
+  languages: ["Javascript", "TypeScript", "C#.NET"],
+  frontend: ["React", "Next.js", "HTML5", "TailwindCSS", "Bootstrap", "UX/UI"],
+  backend: ["Node.js", "Express.js", ".NET Core", "C#"],
+  database: ["SQL Server", "Oracle", "Oracle SQL"],
+  tools_devops: ["Gestión de Proyectos", "CI/CD", "Scrum", "Trello", "Jira", "Git", "GitHub", "Visual Studio", "Visual Studio Code", "SQL Server Management Studio", "Oracle SQL Developer", "Postman"],
 };
 
 export const aboutMe = {
-  name: "Elí Rodríguez",
-  tagline: "Desarrollador Full-Stack",
-  bio: "Soy un desarrollador de software apasionado por crear soluciones tecnológicas eficientes y elegantes. Con experiencia en todo el espectro del desarrollo web, backend, disfruto convirtiendo ideas complejas en aplicaciones funcionales y amigables para el usuario.",
-  photoUrl: "/profile-photo.jpg", // Placeholder para tu foto
+  name: "Elí Rodríguez Salas",
+  tagline: "Full Stack Developer y líder de proyectos",
+  bio: "Apasionado por la tecnología, he dedicado mi carrera a transformar problemas complejos en software robusto, eficiente y escalable. Me motiva aprender constantemente, optimizar procesos y trabajar en equipos multidisciplinarios para lograr resultados sobresalientes. Mi objetivo es seguir impulsando la innovación en proyectos que marcan la diferencia.",
+  photoUrl: "/profile-photo.jpg",
+  linkedinUrl: "https://www.linkedin.com/in/el%C3%AD-rodr%C3%ADguez-2818b71a/",
+  githubUrl: "https://github.com/EliNiperd",
 };
-
