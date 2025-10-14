@@ -64,11 +64,11 @@ export const projects: Project[] = [
 ];
 
 export const skills = {
-  languages: ["Javascript", "TypeScript", "C#.NET"],
+  languages: ["Javascript", "TypeScript", "C#.NET", "Python"],
   frontend: ["React", "Next.js", "HTML5", "TailwindCSS", "Bootstrap", "UX/UI"],
   backend: ["Node.js", "Express.js", ".NET Core", "C#"],
-  database: ["SQL Server", "Oracle", "Oracle SQL"],
-  tools_devops: ["Gestión de Proyectos", "CI/CD", "Scrum", "Trello", "Jira", "Git", "GitHub", "Visual Studio", "Visual Studio Code", "SQL Server Management Studio", "Oracle SQL Developer", "Postman"],
+  database: ["SQL Server", "Oracle", "Oracle SQL", "PostgreSQL"],
+  tools_devops: ["Gestión de Proyectos", "CI/CD", "Git", "GitHub", "Visual Studio", "Visual Studio Code", "SQL Server Management Studio", "Oracle SQL Developer", "Postman"],
 };
 
 export const aboutMe = {
