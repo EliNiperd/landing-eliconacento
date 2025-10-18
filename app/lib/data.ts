@@ -18,22 +18,22 @@ export const projects: Project[] = [
       "Reconocimiento y captura de productos vía cámara móvil.",
       "Gestión de stock en tiempo real y alertas de inventario bajo.",
     ],
-    techStack: "React Native, Python, FastAPI, TensorFlow.js, PostgreSQL",
+    techStack: "React, Next.js (14.2.33), Node.js, recharts.js ,Tailwind CSS, PostgreSQL",
     githubUrl: "https://github.com/EliNiperd/medical-inventory",
     liveDemoUrl: "https://medical-inventory.eliconacento.com/",
   },
   {
-    title: "F1 Race Center 2025",
+    title: "F1 Race Center",
     imageUrl: "/project-f1.png", // Usaremos un placeholder por ahora
-    description: "Un dashboard web que visualiza datos y estadísticas en tiempo real de la temporada 2025 de Fórmula 1, ofreciendo una experiencia inmersiva para los aficionados.",
+    description: "Un dashboard web que permite mostrar una carrera de Fórmula 1 en tiempo real, ofreciendo una experiencia inmersiva para los aficionados.",
     features: [
       "Visualización de datos de carrera en tiempo real (posiciones, vueltas, etc.).",
       "Estadísticas detalladas por piloto y escudería.",
       "Calendario interactivo de la temporada con resultados.",
     ],
-    techStack: "Next.js, TypeScript, WebSockets, Chart.js, Tailwind CSS",
+    techStack: "Next.js (15.3.1), TypeScript, WebSockets, Chart.js, Tailwind CSS",
     githubUrl: "https://github.com/EliNiperd/f1-gp-david",
-    liveDemoUrl: "https://f1.eliconacento.com",
+    liveDemoUrl: "https://demo-race.eliconacento.com",
   },
   {
     title: "Aplicación Web para Certificación ISO/Medio Ambiente - iCalidad",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
       "Seguimiento en tiempo real de flotas y envíos.",
       "Gestión de inventario en tránsito.",
     ],
-    techStack: "ASP.NET, React, Node.js",
+    techStack: "ASP.NET, SQL Server",
     // githubUrl: "", // Si tienes un repo, añádelo aquí
     // liveDemoUrl: "", // Si tienes un demo, añádelo aquí
   },
