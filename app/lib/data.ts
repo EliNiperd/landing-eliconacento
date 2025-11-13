@@ -36,6 +36,19 @@ export const projects: Project[] = [
     liveDemoUrl: "https://demo-race.eliconacento.com",
   },
   {
+    title: "API REST profesional con .NET 9 y SQL Server - 🛍️ EcommerceAPI",
+    imageUrl: "/project-api-rest.png", 
+    description: "API REST profesional con .NET 9 y SQL Server, disenada para un e-commerce.",
+    features: [
+      "Autenticación y autorización de usuarios.",
+      "CRUD de productos y categorías.",
+      "Gestión de carritos de compra.",
+    ],
+    techStack: ".NET 9, SQL Server 2022, ASP.NET Core, EF Core, JWT, Swagger, Azure, Serilog, Unit Tests (xUnit, Fluent Assertions).",
+     githubUrl: "https://github.com/EliNiperd/EcommerceAPI", 
+     liveDemoUrl: "https://ecommerce-api-eli-ehbpgkeqchcccqbu.canadacentral-01.azurewebsites.net/swagger", 
+  },
+  {
     title: "Aplicación Web para Certificación ISO/Medio Ambiente - iCalidad",
     imageUrl: "/project-icalidad.png", // Placeholder
     description: "Plataforma para la gestión y certificación de sistemas de calidad ISO y medio ambiente, optimizando procesos y documentación.",
